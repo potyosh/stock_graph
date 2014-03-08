@@ -1,0 +1,18 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>list</title>
+</head>
+<body>
+ <table border="0">
+<tr><td>Matuda</td></tr>
+<tr><td width="150"><img src="7261.T.png"></td><td><table><tr><td>Purchase:131</td></tr><tr><td>Desired:NON</td></tr><tr><td>Yesterday:283</td></tr><tr><td>Quantity:1000</td></tr><tr><td>Balance:152000</td></tr></table></td></tr>
+
+<tr><td>Capcom</td></tr>
+<tr><td width="150"><img src="9697.T.png"></td><td><table><tr><td>Purchase:1405</td></tr><tr><td>Desired:1600</td></tr><tr><td>Yesterday:1541</td></tr><tr><td>Quantity:100</td></tr><tr><td>Balance:13600</td></tr></table></td></tr>
+
+<tr><td>Takara tommy</td></tr>
+<tr><td width="150"><img src="7867.T.png"></td><td><table><tr><td>Purchase:694</td></tr><tr><td>Desired:750</td></tr><tr><td>Yesterday:515</td></tr><tr><td>Quantity:100</td></tr><tr><td>Balance:-17900</td></tr></table></td></tr>
+ </table>
+</body>
+</html>
