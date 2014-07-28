@@ -17,13 +17,6 @@
     //$url = "http://info.finance.yahoo.co.jp/history/?code=4665.T&sy=2010&sm=11&sd=1&ey=2010&em=11&ed=7&tm=d";
     $url = "http://table.yahoo.co.jp/t?c=$c&a=$a&b=$b&f=$f&d=$d&e=$e&g=d&s=$stock&y=0&z=&x=sb";
     $html = file_get_html($url);
-    
-    $fp_debug = fopen("sample.txt", "w");
-    fwrite($fp_debug, $html);
-    fclose($fp_debug);
-    print "aaaaaaaa".$html."aaaaaaaaaa";
-    
-    
     $filename = $argv[4];
     $fp = fopen("$filename","a");
     
@@ -41,9 +34,9 @@
         $str = implode(',',$arr);
 		if($i != 0 ){
 			//echo "$str\n";
-            $str = str_replace("蟷ｴ", "/", $str);
-            $str = str_replace("譛�", "/", $str);
-            $str = str_replace("譌･", "", $str);
+            $str = str_replace("年", "/", $str);
+            $str = str_replace("月", "/", $str);
+            $str = str_replace("日", "", $str);
             fwrite($fp, "$str\n");
 		}
 		$i++;
