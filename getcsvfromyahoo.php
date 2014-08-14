@@ -1,6 +1,6 @@
 <?php
     include_once('simple_html_dom.php');
-    $tablenumber = 9; // Get the value of 10th table.
+    $tablenumber = 1; // Get the value of 10th table.
     // Get arguents.
     $sdate = localtime(strtotime($argv[1]),TRUE);
     $c=$sdate['tm_year']+1900;
@@ -15,8 +15,10 @@
     // http://table.yahoo.co.jp/t?c=2010&a=11&b=1&f=2010&d=11&e=7&g=d&s=9631&y=0&z=&x=sb
     // http://info.finance.yahoo.co.jp/history/?code=4665.T&sy=2010&sm=11&sd=1&ey=2010&em=11&ed=7&tm=d
     //$url = "http://info.finance.yahoo.co.jp/history/?code=4665.T&sy=2010&sm=11&sd=1&ey=2010&em=11&ed=7&tm=d";
-    $url = "http://table.yahoo.co.jp/t?c=$c&a=$a&b=$b&f=$f&d=$d&e=$e&g=d&s=$stock&y=0&z=&x=sb";
+    //$url = "http://table.yahoo.co.jp/t?c=$c&a=$a&b=$b&f=$f&d=$d&e=$e&g=d&s=$stock&y=0&z=&x=sb";
+    $url = "http://info.finance.yahoo.co.jp/history/?code=$stock&sy=$c&sm=$a&sd=$b&ey=$f&em=$d&ed=$e&tm=d";
     $html = file_get_html($url);
+    //echo $html;
     $filename = $argv[4];
     $fp = fopen("$filename","a");
     
@@ -27,7 +29,7 @@
         $arr = array();
         foreach( $tr->find('td,th') as $td ){
             $tmp = $td->plaintext;
-            $tmp = mb_convert_encoding($tmp,'UTF-8','EUC-JP');
+            //$tmp = mb_convert_encoding($tmp,'UTF-8','EUC-JP');
             $tmp = str_replace(',','',$tmp);
             $arr[] = $tmp;
         }
